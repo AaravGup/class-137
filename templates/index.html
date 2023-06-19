@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1> Exoplanets information</h1>
+    <div class = 'planets'>
+    {% for planet in planets%}
+    <div class = 'planet'>
+        <h2> {{planet['name']}}</h2>
+        {%if planet.planet_type == 'Gas Giant'%}
+        <img id="planet_img" src=".\static\assets\Gas_Giant.png" width="55" min-height="50" alt="" style="display:block">
+        {%endif%}
+        {%if planet.planet_type == 'Terrestrial'%}
+        <img id="planet_img" src=".\static\assets\Terrestrial.png" width="55" min-height="50" alt="" style="display:block">
+        {%endif%}
+        {%if planet.planet_type == 'Super Earth'%}
+        <img id="planet_img" src=".\static\assets\Super_Earth.png" width="55" min-height="50" alt="" style="display:block">
+        {%endif%}
+        {%if planet.planet_type == 'Neptune Like'%}
+        <img id="planet_img" src=".\static\assets\Neptune-like.png" width="55" min-height="50" alt="" style="display:block">
+        {%endif%}
+    </div>
+    {%endfor%}
+</div>
+</body>
+    </html>
